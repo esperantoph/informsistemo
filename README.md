@@ -4,7 +4,7 @@
 [![GNU AGPLv3](https://img.shields.io/badge/licenco-GNU_AGPLv3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/FEJ_PH)
 
-La oficiala informsistemo de la nacia Esperantista junulara asocio de Filipinoj.
+La oficiala informsistemo de la nacia Esperantista junulara asocio de Filipinoj. Estas retejo kie Filipinoj povas vidi anoncojn kaj eventojn pri Esperantista junulara asocio de Filipinoj. Ankaŭe, la retejo havos retpaĝoj pri Esperanto, la organizo. 
 
 ## Kontribui
 
