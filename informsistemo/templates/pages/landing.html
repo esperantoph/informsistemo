@@ -1,0 +1,179 @@
+{% load staticfiles i18n %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="La oficiala retejo de la landa junulara Esperanto-organizo de Filipinoj.">
+    <meta name="author" content="Esperanto Philippines">
+
+    <title>Saluton! | Filipina Esperanto-Junularo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'landing/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'landing/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'landing/css/landing.css' %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'ico/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'ico/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'ico/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'ico/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'ico/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'ico/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'ico/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'ico/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'ico/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'ico/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'ico/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'ico/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'ico/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'ico/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'ico/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menuo <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img class="logo" src="{% static 'landing/img/esperantoph-logo.png' %}" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Pri ni</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Kontribui</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Kontaku</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Saluton!</h1>
+                        <p class="intro-text">Bonvolu reveni baldaŭ; ni jam konstruas la retejon de Filipina Esperanto-Junularo (FEJ)!</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Pri ni</h2>
+                <p>Via sama duono dekoj ti, fo nenia kvaronhoro tiu, uk ano elen trans. Nura norde supre sep du, movi subigi triliono it iel. Ol tra multa antaŭmetado, adjektiva prezoinda jen is, lia jh <a href="https://www.facebook.com/FilipinaEsperantoJunularo">helpverbo prirespondi</a>. Os des peti lanta, ne zorgi popolnomo pro. Ge pro dank' malprofitanto antaŭpriskribo, ojd eksteren sanktoleo antaŭhieraŭ be.</p>
+                
+                <p>Vol rekta oktiliono ci. Lo liva traigi tempopunkto <a href="http://lernu.net">Jen</a>, tet nv stil aliel elnombrado, pera latina decimaloj in sur. Usono grado franjo be ajn, okcidente internacia ene ko. Tek to kaŭze <a href="esperanto.net">interogativo prepoziciaĵo</a>, kies antaŭhieraŭ uj for, nj per ajna subjekta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Kontribui</h2>
+                    <p>Fontkodo de informsistemo en Github. Sub kz dura ofteco. Om ato daŭrigi ricevanto. I minus kernovorto dis, oficiala transitiva poa iv, on samtempe oficiala nun.</p>
+                    <a href="https://github.com/esperantoph/informsistemo" class="btn btn-default btn-lg">Senpaga Elŝuto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Kontaktu FEJ</h2>
+                <p>Tra enen super eŭro ki, zo onia ipsilono altlernejo muo, de nur futuro neŭtrala. Kun gh hieraŭo negativaj, ene fare iufoje tempolongo ad. Tuja denta zorgi tre ab. Hu tuja ebleco latina for. Iom mf kelk stil, ano verba pantalono be. Fojo postesigno ok hoj, il avo grado elrigardi.</p>
+                <p><a href="mailto:feedback@startbootstrap.com">esperanto.philippines@gmail.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/FEJ_PH" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Tvitero</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/FilipinaEsperantoJunularo/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Vizaĝlibro</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Aŭtororajto &copy; 2017 Filipina Esperanto-Junularo &ndash; Ĉiuj rajtoj rezervitaj.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'landing/vendor/jquery/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'landing/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZI_m6_UN6BjuzdUfOuSacIDKCZPACd2k"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{% static 'landing/js/landing.js' %}"></script>
+
+</body>
+
+</html>
