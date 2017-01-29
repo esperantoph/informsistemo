@@ -1,0 +1,364 @@
+//colors
+$color_christi_approx: #51bd20;
+$white_30: rgba(255, 255, 255, 0.3);
+$white: white;
+$color_broom_approx: #ffed1a;
+$color_eucalyptus_approx: #1d9b6c;
+$white_20: rgba(255, 255, 255, 0.2);
+$white_80: rgba(255, 255, 255, 0.8);
+$black: black;
+$white_10: rgba(255, 255, 255, 0.1);
+$color_alabaster_approx: #fcfcfc;
+
+//fonts
+$font_0: Lora;
+$font_1: Helvetica Neue;
+$font_2: Helvetica;
+$font_3: Arial;
+$font_4: sans-serif;
+$font_5: Montserrat;
+
+//urls
+$url_0: url(../img/intro-bg.jpg);
+$url_1: url(../img/downloads-bg.jpg);
+
+//@extend-elements
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%extend_1 {
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: $font_5, $font_1, $font_2, $font_3, $font_4;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+    color: $white;
+    background-color: $color_christi_approx;
+    webkit-tap-highlight-color: $white_20;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+h1 {
+    @extend %extend_1;
+}
+h2 {
+    @extend %extend_1;
+}
+h3 {
+    @extend %extend_1;
+}
+h4 {
+    @extend %extend_1;
+}
+h5 {
+    @extend %extend_1;
+}
+h6 {
+    @extend %extend_1;
+}
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+@media(min-width: 768px) {
+    p {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: none;
+        letter-spacing: 1px;
+        background: transparent;
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+        &.top-nav-collapse {
+            padding: 0;
+            background: $color_christi_approx;
+            border-bottom: 1px solid $white_30;
+        }
+    }
+    .intro {
+        height: 100%;
+        padding: 0;
+        .intro-body {
+            .brand-heading {
+                font-size: 100px;
+            }
+            .intro-text {
+                font-size: 26px;
+            }
+        }
+    }
+}
+a {
+    color: $color_broom_approx;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        text-decoration: none;
+        color: $color_eucalyptus_approx;
+    }
+    &:focus {
+        text-decoration: none;
+        color: $color_eucalyptus_approx;
+    }
+}
+.light {
+    font-weight: 400;
+}
+.navbar-custom {
+    margin-bottom: 0;
+    border-bottom: 1px solid $white_30;
+    text-transform: uppercase;
+    font-family: $font_5, $font_1, $font_2, $font_3, $font_4;
+    background-color: $color_christi_approx;
+    .navbar-toggle {
+        color: $white;
+        background-color: $white_20;
+        font-size: 12px;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            outline: none;
+        }
+    }
+    .navbar-brand {
+        font-weight: 700;
+        &:focus {
+            outline: none;
+        }
+    }
+    a {
+        color: $white;
+    }
+    .nav li {
+        a {
+            //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+            transition: background 0.3s ease-in-out;
+            &:hover {
+                color: $white_80;
+                outline: none;
+                background-color: transparent;
+            }
+            &:focus {
+                outline: none;
+                background-color: transparent;
+            }
+            &:active {
+                outline: none;
+                background-color: transparent;
+            }
+        }
+        &.active {
+            outline: none;
+            a {
+                background-color: $white_30;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: $white;
+    background: $url_0 no-repeat bottom center scroll;
+    background-color: $black;
+    background-size: cover;
+    .intro-body {
+        display: table-cell;
+        vertical-align: middle;
+        .brand-heading {
+            font-size: 40px;
+        }
+        .intro-text {
+            font-size: 18px;
+        }
+    }
+}
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 100% !important;
+    font-size: 40px;
+    color: $white;
+    background: transparent;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: background 0.3s ease-in-out;
+    &:hover {
+        outline: none;
+        color: $white;
+        background: $white_10;
+        i.animated {
+        }
+    }
+    &:focus {
+        outline: none;
+        color: $white;
+        background: $white_10;
+    }
+    i.animated {
+    }
+}
+@-webkit-keyframes pulse {
+    0% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+    }
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1.2);
+    }
+    100% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+    }
+}
+@-moz-keyframes pulse {
+    0% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+    }
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1.2);
+    }
+    100% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+    }
+}
+.content-section {
+    padding-top: 100px;
+}
+.download-section {
+    width: 100%;
+    padding: 50px 0;
+    color: $white;
+    background: $url_1 no-repeat center center scroll;
+    background-color: $black;
+    background-size: cover;
+}
+#map {
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+}
+@media(min-width: 767px) {
+    .content-section {
+        padding-top: 250px;
+    }
+    .download-section {
+        padding: 100px 0;
+    }
+    #map {
+        height: 400px;
+        margin-top: 250px;
+    }
+}
+.btn {
+    text-transform: uppercase;
+    font-family: $font_5, $font_1, $font_2, $font_3, $font_4;
+    font-weight: 400;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s ease-in-out;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+}
+.btn-default {
+    border: 1px solid $color_broom_approx;
+    color: $white;
+    background-color: transparent;
+    &:hover {
+        border: 1px solid $color_broom_approx;
+        outline: none;
+        color: $black;
+        background-color: $color_broom_approx;
+    }
+    &:focus {
+        border: 1px solid $color_broom_approx;
+        outline: none;
+        color: $black;
+        background-color: $color_broom_approx;
+    }
+}
+@media(max-width: 1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+@media(max-width: 767px) {
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    img.logo {
+        height: 53px;
+        width: 53px;
+    }
+}
+footer {
+    padding: 50px 0;
+    p {
+        margin: 0;
+    }
+}
+::-moz-selection {
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    background: $color_alabaster_approx;
+    background: $white_20;
+}
+::selection {
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    background: $color_alabaster_approx;
+    background: $white_20;
+}
+img::selection {
+    background: transparent;
+}
+img::-moz-selection {
+    background: transparent;
+}
+.navbar-brand {
+    padding: 0;
+}
+.logo {
+    height: 60px;
+    width: 60px;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.2s ease-in-out;
+}
+.logo-collapse {
+    height: 50px;
+    width: 50px;
+}
+ul.banner-social-buttons {
+    margin-top: 0;
+}
