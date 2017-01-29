@@ -26,7 +26,8 @@ env.read_env()
 # ------------------------------------------------------------------------------
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/1.6/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['esperantoph.org'])
+# ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['esperantoph.org'])
+ALLOWED_HOSTS = ['local.esperantoph.org']
 # END SITE CONFIGURATION
 
 # APP CONFIGURATION
@@ -39,10 +40,10 @@ DJANGO_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    
     # Useful template tags:
     'django.contrib.humanize',
-
+    
     # Admin
     'django.contrib.admin',
 )
@@ -58,6 +59,7 @@ LOCAL_APPS = (
     # custom users app
     'informsistemo.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'informsistemo.website.apps.WebsiteConfig',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -299,31 +301,31 @@ LOGGING = {
         'log_file':{
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': str(LOGS_DIR.path('onelist.django.log')),
+            'filename': str(LOGS_DIR.path('informsistemo.django.log')),
             'maxBytes': 1024 * 1024 * 5,
             'backupCount': 10,
             'formatter': 'verbose',
         },
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': [],
-            'class': 'django.utils.log.AdminEmailHandler',
-            'include_html': True,
-        },
+        # 'mail_admins': {
+        #     'level': 'ERROR',
+        #     'filters': [],
+        #     'class': 'django.utils.log.AdminEmailHandler',
+        #     'include_html': True,
+        # },
     },
     'loggers': {
         'django': {
-            'handlers': ['console', 'log_file', 'mail_admins'],
+            'handlers': ['console', 'log_file'],
             'level': 'ERROR',
             'propagate': False,
         },
         'django.request': {
-            'handlers': ['console', 'log_file', 'mail_admins'],
+            'handlers': ['console', 'log_file'],
             'level': 'ERROR',
             'propagate': False,
         },
         'notifications.chikka.callback': {
-            'handlers': ['console', 'log_file', 'mail_admins'],
+            'handlers': ['console', 'log_file'],
             'level': 'ERROR',
             'propagate': False,
         },

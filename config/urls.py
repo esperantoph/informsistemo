@@ -21,6 +21,7 @@ urlpatterns = [
     
     # User management
     url(r'^users/', include('informsistemo.users.urls', namespace='users')),
+    url(r'^news/', include('informsistemo.website.urls', namespace='news')),
     url(r'^accounts/', include('allauth.urls')),
     
     # Your stuff: custom urls includes go here

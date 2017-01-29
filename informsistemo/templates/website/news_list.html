@@ -1,0 +1,22 @@
+{% extends "pages/base.html" %}
+
+{% load staticfiles i18n %}
+
+{% block page_title %}Novaĵoj{% endblock page_title %}
+
+{% block page_header %}{% endblock page_header %}
+
+{% block page_content %}
+  <div class="article-list">
+  {% for article in articles %}
+    <hr />
+    <div class="article">
+      <span class="article-title">{{ article.title }}</span>
+      <span class="article-author">{{ article.author }}</span>
+      <div class="article-body">{{ article.body }}</div>
+    </div>
+  {% empty %}
+    <span>Nenio nova.</span>
+  {% endfor %}
+  </div>
+{% endblock page_content %}
