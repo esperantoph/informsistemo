@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="La oficiala retejo de la landa junulara Esperanto-organizo de Filipinoj.">
+    <meta name="description" content="{{ hs.homepage_description_short }}">
     <meta name="author" content="Esperanto Philippines">
 
-    <title>Saluton! | Filipina Esperanto-Junularo</title>
+    <title>{{ hs.homepage_title }} | Filipina Esperanto-Junularo</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'landing/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -72,17 +72,14 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Pri ni</a>
+                        <a class="page-scroll" href="#{{ hs.about_header_div_id }}">{{ hs.about_navbar_text }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Kontribui</a>
+                        <a class="page-scroll" href="#{{ hs.contribute_header_div_id }}">{{ hs.contribute_navbar_text }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Kontaku</a>
+                        <a class="page-scroll" href="#{{ hs.contact_header_div_id }}">{{ hs.contact_navbar_text }}</a>
                     </li>
-                    <!-- <li>
-                        <a href="{% url 'news:list' %}">Novaĵoj</a>
-                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -108,24 +105,22 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+    <section id="{{ hs.about_header_div_id }}" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Pri ni</h2>
-                <p>Via sama duono dekoj ti, fo nenia kvaronhoro tiu, uk ano elen trans. Nura norde supre sep du, movi subigi triliono it iel. Ol tra multa antaŭmetado, adjektiva prezoinda jen is, lia jh <a href="https://www.facebook.com/FilipinaEsperantoJunularo">helpverbo prirespondi</a>. Os des peti lanta, ne zorgi popolnomo pro. Ge pro dank' malprofitanto antaŭpriskribo, ojd eksteren sanktoleo antaŭhieraŭ be.</p>
-                
-                <p>Vol rekta oktiliono ci. Lo liva traigi tempopunkto <a href="http://lernu.net">Jen</a>, tet nv stil aliel elnombrado, pera latina decimaloj in sur. Usono grado franjo be ajn, okcidente internacia ene ko. Tek to kaŭze <a href="esperanto.net">interogativo prepoziciaĵo</a>, kies antaŭhieraŭ uj for, nj per ajna subjekta.</p>
+                <h2>{{ hs.about_header_text }}</h2>
+                <p>{{ hs.about_description_short|safe }}</p>
             </div>
         </div>
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
+    <section id="{{ hs.contribute_header_div_id }}" class="content-section text-center">
+        <div class="{{ hs.contribute_header_div_id }}-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Kontribui</h2>
-                    <p>Fontkodo de informsistemo en Github. Sub kz dura ofteco. Om ato daŭrigi ricevanto. I minus kernovorto dis, oficiala transitiva poa iv, on samtempe oficiala nun.</p>
+                    <h2>{{ hs.contribute_header_text }}</h2>
+                    <p>{{ hs.contribute_description_short|safe }}</p>
                     <a href="https://github.com/esperantoph/informsistemo" class="btn btn-default btn-lg">Senpaga Elŝuto</a>
                 </div>
             </div>
@@ -133,11 +128,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
+    <section id="{{ hs.contact_header_div_id }}" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Kontaktu FEJ</h2>
-                <p>Tra enen super eŭro ki, zo onia ipsilono altlernejo muo, de nur futuro neŭtrala. Kun gh hieraŭo negativaj, ene fare iufoje tempolongo ad. Tuja denta zorgi tre ab. Hu tuja ebleco latina for. Iom mf kelk stil, ano verba pantalono be. Fojo postesigno ok hoj, il avo grado elrigardi.</p>
+                <h2>{{ hs.contact_header_text }}</h2>
+                <p>{{ hs.contact_description_short|safe }}</p>
                 <p><a href="mailto:esperanto.philippines@gmail.com">esperanto.philippines@gmail.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">

@@ -33,32 +33,28 @@ ALLOWED_HOSTS = ['local.esperantoph.org']
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
 DJANGO_APPS = (
-    # Default Django apps:
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    # Useful template tags:
     'django.contrib.humanize',
-    
-    # Admin
     'django.contrib.admin',
 )
 THIRD_PARTY_APPS = (
-    'crispy_forms',  # Form layouts
-    'allauth',  # registration
-    'allauth.account',  # registration
-    'allauth.socialaccount',  # registration
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'colorfield',
+    'tinymce',
+    'redactor',
 )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    # custom users app
     'informsistemo.users.apps.UsersConfig',
-    # Your stuff: custom apps go here
     'informsistemo.website.apps.WebsiteConfig',
 )
 
@@ -172,6 +168,7 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
                 # Your stuff: custom template context processors go here
+                'informsistemo.website.context_processors.homepage_settings',
             ],
         },
     },
@@ -339,3 +336,6 @@ LOGGING = {
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+REDACTOR_OPTIONS = {'lang': 'en'}
+REDACTOR_UPLOAD = 'uploads/'
+REDACTOR_UPLOAD_HANDLER = 'redactor.handlers.UUIDUploader'

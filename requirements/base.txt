@@ -41,3 +41,5 @@ redis>=2.10.5
 
 
 # Your custom requirements go here
+django-colorfield==0.1.12
+django-wysiwyg-redactor==0.4.9.1

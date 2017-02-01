@@ -21,33 +21,87 @@ class HomepageSettingAdmin(admin.ModelAdmin):
     Manage Homepage Settings from the admin dashboard.
     """
     
-    # fieldsets = (
-    #     (_('Main'), {
-    #         'fields': (
-    #             'main_header_text',
-    #             'main_header_image',
-    #             'main_subtitle_text',
-    #             'main_description_text',
-    #         ),
-    #     }),
-    #     (_('Articles Section'), {
-    #         'fields': (
-    #             'articles_header_text',
-    #             'articles_subtitle_text',
-    #             'articles_subtitle_text2',
-    #             'articles_limit_items',
-    #         ),
-    #     }),
-    #     (_('Contact Section'), {
-    #         'fields': (
-    #             'contact_header_text',
-    #             'contact_subtitle_text',
-    #         ),
-    #     }),
-    # )
-    # list_display = ('main_header_text', 'datetime_created',)
-    
-    pass
+    fieldsets = (
+        (None, {
+            'fields': (
+                'homepage_title',
+                'homepage_description_short',
+            ),
+        }),
+        (_('Main Section'), {
+            'classes': ('collapse',),
+            'fields': (
+                'main_navbar_text',
+                'main_navbar_shown',
+                'main_header_text',
+                'main_description_short',
+                'main_header_image',
+                'main_header_color',
+                'main_header_div_id',
+            ),
+        }),
+        (_('About Section'), {
+            'classes': ('collapse',),
+            'fields': (
+                'about_navbar_text',
+                'about_navbar_shown',
+                'about_header_text',
+                'about_description_short',
+                'about_header_image',
+                'about_header_color',
+                'about_header_div_id',
+                'about_button_text',
+                'about_button_url',
+                'about_button_shown',
+            ),
+        }),
+        (_('Contribute Section'), {
+            'classes': ('collapse',),
+            'fields': (
+                'contribute_navbar_text',
+                'contribute_navbar_shown',
+                'contribute_header_text',
+                'contribute_description_short',
+                'contribute_header_image',
+                'contribute_header_color',
+                'contribute_header_div_id',
+                'contribute_button_text',
+                'contribute_button_url',
+                'contribute_button_shown',
+            ),
+        }),
+        (_('Contact Section'), {
+            'classes': ('collapse',),
+            'fields': (
+                'contact_navbar_text',
+                'contact_navbar_shown',
+                'contact_header_text',
+                'contact_description_short',
+                'contact_header_image',
+                'contact_header_color',
+                'contact_header_div_id',
+                'contact_button_text',
+                'contact_button_url',
+                'contact_button_shown',
+            ),
+        }),
+        (_('Articles Section'), {
+            'classes': ('collapse',),
+            'fields': (
+                'articles_navbar_text',
+                'articles_navbar_shown',
+                'articles_header_text',
+                'articles_description_short',
+                'articles_header_image',
+                'articles_header_color',
+                'articles_header_div_id',
+                'articles_button_text',
+                'articles_button_url',
+                'articles_button_shown',
+            ),
+        }),
+    )
+    list_display = ('main_header_text', 'datetime_created',)
 
 
 basic_admin_site.register(HomepageSetting, HomepageSettingAdmin)
@@ -138,11 +192,9 @@ class SocialAccountAdmin(admin.ModelAdmin):
     View Milestones from the admin dashboard.
     """
     
-    # list_display = ('title', 'icon', 'url', 'datetime_created', 'order',)
-    # list_filter = ('datetime_created',)
-    # search_fields = ('title',)
-    
-    pass
+    list_display = ('title', 'icon', 'url', 'datetime_created', 'order',)
+    list_filter = ('datetime_created',)
+    search_fields = ('title',)
 
 
 basic_admin_site.register(SocialAccount, SocialAccountAdmin)
